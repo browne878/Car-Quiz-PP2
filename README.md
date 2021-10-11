@@ -106,3 +106,9 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 ---
 
 Happy coding!
+
+
+**Credits**
+
+[Audi Logo](https://www.freelogovectors.net/audi-logo-eps-pdf/)
+[CLA Estate](https://www.cleanpng.com/png-mercedes-benz-cla-shooting-brake-2017-mercedes-ben-2296453/)
