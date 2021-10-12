@@ -1,4 +1,4 @@
-let quizQuestions = [
+let quizQuestions = [ // 23 questions
     {
         question: "What vehicle manufacturer has a logo with 4 interlocked rings?",
         options: [ "Audi", "Mercedes", "Volkswagen", "BMW"],
