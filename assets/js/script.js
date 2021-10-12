@@ -1,4 +1,6 @@
-let playButton = document.getElementById('play').addEventListener('click', beginGame);
+document.getElementById('play').addEventListener('click', beginGame);
+
+loadQuestion(quizQuestions[2]);
 
 function beginGame() {
 
@@ -28,4 +30,20 @@ function getQuestions() {
     }
 
     return selectedQuestions;
+}
+
+
+/**
+ * Populates HTML with the parsed question and options
+ * @param {Question Object} question 
+ */
+function loadQuestion(question) {
+    document.getElementById('question').textContent = question.question;
+
+    let options = document.getElementsByClassName('option');
+
+    for (const option of options) {
+        option.textContent = question.questionOptions[0];
+        question.questionOptions.shift();
+    }
 }
