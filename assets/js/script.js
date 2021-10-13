@@ -1,6 +1,19 @@
-document.getElementById('play').addEventListener('click', beginGame);
+// Event Listeners
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('play').addEventListener('click', beginGame);
+    
+    let options = document.getElementsByClassName('option');
 
-loadQuestion(quizQuestions[2]);
+    for (const option of options) {
+        option.addEventListener('click', optionSelected);
+    }
+})
+
+
+// Global Variables
+let selectedQuestions = [];
+let numCorrectAnswers = 0;
+let numIncorrectAnswers = 0;
 
 function beginGame() {
 
@@ -11,8 +24,8 @@ function beginGame() {
  * @returns Array of Question Objects
  */
 function getQuestions() {
+
     let selectedIndex = [];
-    let selectedQuestions = [];
 
     for (let i = 0; i < 10; i++) {
         let index = Math.floor(Math.random() * 23);
@@ -45,5 +58,33 @@ function loadQuestion(question) {
     for (const option of options) {
         option.textContent = question.questionOptions[0];
         question.questionOptions.shift();
+    }
+}
+
+function gameCompleted() {
+    alert('Game Completed');
+}
+
+// Event Triggered Functions
+
+/**
+ * Handles the selected option Event
+ * @param {Click Event} event 
+ */
+function optionSelected(event) {
+    let answer = event.srcElement.textContent;
+
+    currentQuestion = selectedQuestions.find(question => question.question === document.getElementById('question').textContent);
+
+    if (currentQuestion.correctAnswer === answer) {
+        numCorrectAnswers++;
+    } else {
+        numIncorrectAnswers++;
+    }
+
+    if ((selectedQuestions.indexOf(currentQuestion) + 1) === selectedQuestions.length) {
+        gameCompleted();
+    } else {
+        loadQuestion(selectedQuestions[(selectedQuestions.indexOf(currentQuestion) + 1)]);
     }
 }
