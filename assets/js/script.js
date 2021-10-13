@@ -15,8 +15,13 @@ let selectedQuestions = [];
 let numCorrectAnswers = 0;
 let numIncorrectAnswers = 0;
 
+/**
+ * Gets questions and begins the game
+ */
 function beginGame() {
+    getQuestions();
 
+    loadQuestion(selectedQuestions[0]);
 }
 
 /**
@@ -41,8 +46,6 @@ function getQuestions() {
     for (const index of selectedIndex) {
         selectedQuestions.push(quizQuestions[index]);
     }
-
-    return selectedQuestions;
 }
 
 
