@@ -65,7 +65,15 @@ function loadQuestion(question) {
 }
 
 function gameCompleted() {
-    alert('Game Completed');
+    alert('Game Completed ' + calculateScore());
+}
+
+/**
+ * Calcualtes the percentage of answers answered correctly
+ * @returns Percentage of correct answers
+ */
+function calculateScore() {
+    return Math.floor((numCorrectAnswers / selectedQuestions.length) * 100);
 }
 
 // Event Triggered Functions
