@@ -76,6 +76,13 @@ function calculateScore() {
     return Math.floor((numCorrectAnswers / selectedQuestions.length) * 100);
 }
 
+/**
+ * Begins a countdown to read and answer questions
+ */
+function countdown() {
+    
+}
+
 // Event Triggered Functions
 
 /**

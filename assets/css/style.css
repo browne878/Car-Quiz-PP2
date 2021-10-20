@@ -1,2 +1,19 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #05668D;
+    color: #F0F3BD;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+}
+
+.game-area {
+    background-color: #00A896;
+}
