@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     for (const option of options) {
         option.addEventListener('click', optionSelected);
     }
+
+    document.getElementById('timer').addEventListener('countdown', handleTimeout);
 })
 
 
@@ -14,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
 let selectedQuestions = [];
 let numCorrectAnswers = 0;
 let numIncorrectAnswers = 0;
+
+// Custom Events
+const countdownComplete = new CustomEvent('countdown');
 
 /**
  * Gets questions and begins the game
@@ -125,4 +130,11 @@ function optionSelected(event) {
     } else {
         loadQuestion(selectedQuestions[(selectedQuestions.indexOf(currentQuestion) + 1)]);
     }
+}
+
+/***
+ * Handles countdown hitting 0 on question and answer
+ */
+function handleTimeout() {
+    
 }
