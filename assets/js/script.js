@@ -80,7 +80,27 @@ function calculateScore() {
  * Begins a countdown to read and answer questions
  */
 function countdown() {
+    let timer = document.getElementById('timer');
+
+    const timeLimit = 20;
+    let timePassed = 0;
+    let timeLeft = timeLimit;
+
+    // Credit to https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ - timer function
+    let timerInterval = setInterval(() => {
     
+        // The amount of time passed increments by one
+        timePassed = timePassed += 1;
+        timeLeft = timeLimit - timePassed;
+        
+        // The time left label is updated
+        timer.innerHTML = timeLeft;
+
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+        }
+
+      }, 1000);
 }
 
 // Event Triggered Functions
