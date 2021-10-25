@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let selectedQuestions = [];
 let numCorrectAnswers = 0;
 let numIncorrectAnswers = 0;
+let timerInterval;
 
 // Custom Events
 const countdownComplete = new CustomEvent('countdown');
@@ -95,7 +96,7 @@ function countdown() {
     let timeLeft = timeLimit;
 
     // Credit to https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ - timer function
-    let timerInterval = setInterval(() => {
+    timerInterval = setInterval(() => {
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
@@ -119,6 +120,10 @@ function countdown() {
  * @param {Option Selected String} answer 
  */
 function checkAnswer(question, answer) {
+
+    clearInterval(timerInterval);
+    document.getElementById('timer').textContent = 10;
+
     if (question.correctAnswer === answer) {
         numCorrectAnswers++;
     } else {
@@ -139,6 +144,7 @@ function checkAnswer(question, answer) {
  * @param {Click Event} event 
  */
 function optionSelected(event) {
+
     let answer = event.srcElement.textContent;
 
     currentQuestion = selectedQuestions.find(question => question.question === document.getElementById('question').textContent);
@@ -161,6 +167,8 @@ function handleTimeout() {
 
         countdown();
     } else {
+        let question = selectedQuestions.find(currentQuestion => currentQuestion.question === document.getElementById('question').textContent);
 
+        checkAnswer(question, '');
     }
 }
