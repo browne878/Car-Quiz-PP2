@@ -1,7 +1,7 @@
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('play').addEventListener('click', beginGame);
-    
+
     let options = document.getElementsByClassName('option');
 
     for (const option of options) {
@@ -64,9 +64,12 @@ function loadQuestion(question) {
     let options = document.getElementsByClassName('option');
 
     for (const option of options) {
+        option.style.visibility = 'hidden';
         option.textContent = question.questionOptions[0];
         question.questionOptions.shift();
     }
+
+    countdown();
 }
 
 function gameCompleted() {
@@ -87,25 +90,46 @@ function calculateScore() {
 function countdown() {
     let timer = document.getElementById('timer');
 
-    const timeLimit = 20;
+    const timeLimit = 10;
     let timePassed = 0;
     let timeLeft = timeLimit;
 
     // Credit to https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ - timer function
     let timerInterval = setInterval(() => {
-    
-        // The amount of time passed increments by one
-        timePassed = timePassed += 1;
-        timeLeft = timeLimit - timePassed;
-        
-        // The time left label is updated
-        timer.innerHTML = timeLeft;
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
+            timer.dispatchEvent(countdownComplete);
+            return;
         }
 
-      }, 1000);
+        // The amount of time passed increments by one
+        timePassed = timePassed += 1;
+        timeLeft = timeLimit - timePassed;
+
+        // The time left label is updated
+        timer.innerHTML = timeLeft;
+
+    }, 1000);
+}
+
+/**
+ * Checks the answer of the provided question
+ * @param {Question Object} question 
+ * @param {Option Selected String} answer 
+ */
+function checkAnswer(question, answer) {
+    if (question.correctAnswer === answer) {
+        numCorrectAnswers++;
+    } else {
+        numIncorrectAnswers++;
+    }
+
+    if ((selectedQuestions.indexOf(question) + 1) === selectedQuestions.length) {
+        gameCompleted();
+    } else {
+        loadQuestion(selectedQuestions[(selectedQuestions.indexOf(question) + 1)]);
+    }
 }
 
 // Event Triggered Functions
@@ -119,22 +143,24 @@ function optionSelected(event) {
 
     currentQuestion = selectedQuestions.find(question => question.question === document.getElementById('question').textContent);
 
-    if (currentQuestion.correctAnswer === answer) {
-        numCorrectAnswers++;
-    } else {
-        numIncorrectAnswers++;
-    }
-
-    if ((selectedQuestions.indexOf(currentQuestion) + 1) === selectedQuestions.length) {
-        gameCompleted();
-    } else {
-        loadQuestion(selectedQuestions[(selectedQuestions.indexOf(currentQuestion) + 1)]);
-    }
+    checkAnswer(currentQuestion, answer);
 }
 
 /***
  * Handles countdown hitting 0 on question and answer
  */
 function handleTimeout() {
-    
+
+    let options = document.getElementsByClassName('option');
+
+    if (options[0].style.visibility === 'hidden') {
+        for (const option of options) {
+            option.style.visibility = 'visible';
+        }
+        document.getElementById('timer').textContent = 10;
+
+        countdown();
+    } else {
+
+    }
 }
