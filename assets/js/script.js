@@ -75,6 +75,7 @@ function loadQuestion(question) {
 
 function gameCompleted() {
     alert('Game Completed ' + calculateScore());
+    clearInterval(timerInterval);
 }
 
 /**
