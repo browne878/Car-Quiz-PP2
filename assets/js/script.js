@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.getElementById('timer').addEventListener('countdown', handleTimeout);
-})
+});
 
 
 // Global Variables
@@ -148,7 +148,7 @@ function optionSelected(event) {
 
     let answer = event.srcElement.textContent;
 
-    currentQuestion = selectedQuestions.find(question => question.question === document.getElementById('question').textContent);
+    let currentQuestion = selectedQuestions.find(question => question.question === document.getElementById('question').textContent);
 
     checkAnswer(currentQuestion, answer);
 }

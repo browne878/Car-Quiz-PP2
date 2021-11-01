@@ -1,19 +1,62 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
 
+/* body {
+    
+} */
+
+* {
+    height: 100%;
+}
+
 body {
+    background: url('../images/pexels-sourav-mishra-3136673.jpg') no-repeat center;
     font-family: 'Montserrat', sans-serif;
-    background-color: #05668D;
-    color: #F0F3BD;
+    color: #EEEEEE;
+    filter: blur(0px);
+
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 15% 70% 15%;
 }
 
 h1,
 h2,
 h3 {
     font-family: 'Fredoka One', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+.heading {
+    grid-area: 1 / 2;
+    place-self: center;
+    height: auto;
 }
 
 .game-area {
-    background-color: #00A896;
+    grid-area: 2 / 2 / 2 / 2;
+    background-color: rgba(120, 122, 145, .3);
+    border-radius: 50px;
+
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
+}
+
+.welcome-screen {
+    grid-area: 2 / 2;
+    text-align: center;
+}
+
+#question-screen {
+    grid-area: 2 / 2;
+    visibility: hidden;
+}
+
+#play {
+    height: 5rem;
+    width: 10rem;
+    background-color: rgba(120, 122, 145, .5);
+    color: inherit;
+    border-radius: 50px;
 }
