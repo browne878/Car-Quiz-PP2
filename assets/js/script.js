@@ -27,6 +27,9 @@ const countdownComplete = new CustomEvent('countdown');
 function beginGame() {
     getQuestions();
 
+    document.getElementById('welcome-screen').style.visibility = 'hidden';
+    document.getElementById('question-screen').style.visibility = 'visible';
+
     loadQuestion(selectedQuestions[0]);
 }
 
