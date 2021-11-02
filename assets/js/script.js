@@ -106,6 +106,9 @@ function countdown() {
             clearInterval(timerInterval);
             timer.dispatchEvent(countdownComplete);
             return;
+        } else if (timeLeft === 10) {
+            document.getElementById('progress-bar').classList.remove('load');
+            document.getElementById('progress-bar').classList.add('load')
         }
 
         // The amount of time passed increments by one

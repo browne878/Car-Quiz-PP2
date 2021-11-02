@@ -86,8 +86,33 @@ h3 {
     text-align: center;
 }
 
-#timer {
+#countdown {
     grid-area: 2 / 2;
+    place-self: center;
+    justify-items: center;
+    width: min-content;
+    height: min-content;
+}
+
+#timer {
+    height: min-content;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+}
+
+#progress {
+    background-color: rgba(238, 238, 238, .5);
+    height: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.load {
+    border-radius: 10px;
+    width: 100%;
+    background-color: green;
+    animation: load 10s normal forwards;
 }
 
 #options {
@@ -100,5 +125,20 @@ h3 {
 
 #options > * {
     place-self: center;
-    font-size: 30px;
+    font-size: 20px;
+    height: auto;
+}
+
+@keyframes load {
+	0% {
+		width: 0;
+	}
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: red;
+    }
 }
