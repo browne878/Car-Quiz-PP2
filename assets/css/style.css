@@ -1,15 +1,14 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
 
-/* body {
-    
-} */
+/* Page */
 
 * {
     margin: 0;
     padding: 0;
     border: none;
     height: 100%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 body {
@@ -36,15 +35,7 @@ h3 {
     height: auto;
 }
 
-.game-area {
-    grid-area: 2 / 2 / 2 / 2;
-    background-color: rgba(120, 122, 145, .3);
-    border-radius: 50px;
-
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
-}
+/* Welcome Screen */
 
 #welcome-screen {
     grid-area: 2 / 2 / 4 / 2;
@@ -53,19 +44,6 @@ h3 {
 
     display: grid;
     grid-template-rows: 1fr 2fr 4fr;
-    grid-template-columns: 1fr 8fr 1fr;
-}
-
-#welcome-screen > h2 {
-    grid-area: 1 / 2;
-}
-
-#question-screen {
-    grid-area: 2 / 2 / 4 / 2;
-    visibility: hidden;
-
-    display: grid;
-    grid-template-rows: 2fr 3fr 4fr;
     grid-template-columns: 1fr 8fr 1fr;
 }
 
@@ -78,6 +56,38 @@ h3 {
     display: block;
     grid-area: 3 / 2;
     place-self: center;
+}
+
+#welcome-screen > h2 {
+    grid-area: 1 / 2;
+}
+
+/* Game Area */
+
+.game-area {
+    grid-area: 2 / 2 / 2 / 2;
+    background-color: rgba(120, 122, 145, .3);
+    border-radius: 50px;
+
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
+}
+
+.load {
+    border-radius: 10px;
+    width: 100%;
+    background-color: green;
+    animation: load 11s normal forwards;
+}
+
+#question-screen {
+    grid-area: 2 / 2 / 4 / 2;
+    visibility: hidden;
+
+    display: grid;
+    grid-template-rows: 2fr 3fr 4fr;
+    grid-template-columns: 1fr 8fr 1fr;
 }
 
 #question {
@@ -108,13 +118,6 @@ h3 {
     width: 500px;
 }
 
-.load {
-    border-radius: 10px;
-    width: 100%;
-    background-color: green;
-    animation: load 11s normal forwards;
-}
-
 #options {
     grid-area: 3 / 2;
 
@@ -128,6 +131,13 @@ h3 {
     font-size: 20px;
     height: auto;
 }
+
+/* Game Complete Screen */
+
+
+/* Media Queries */
+
+/* Keyframes */
 
 @keyframes load {
 	0% {
