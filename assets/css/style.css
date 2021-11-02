@@ -112,7 +112,7 @@ h3 {
     border-radius: 10px;
     width: 100%;
     background-color: green;
-    animation: load 10s normal forwards;
+    animation: load 11s normal forwards;
 }
 
 #options {

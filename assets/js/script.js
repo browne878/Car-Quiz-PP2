@@ -98,6 +98,12 @@ function countdown() {
     const timeLimit = 10;
     let timePassed = 0;
     let timeLeft = timeLimit;
+    
+    // Start progress bar animation
+    let countdown = document.getElementById('progress-bar');
+    let countdownClone = countdown.cloneNode(true);
+    countdown.parentNode.replaceChild(countdownClone, countdown);
+    document.getElementById('progress-bar').classList.add('load')
 
     // Credit to https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ - timer function
     timerInterval = setInterval(() => {
@@ -106,9 +112,6 @@ function countdown() {
             clearInterval(timerInterval);
             timer.dispatchEvent(countdownComplete);
             return;
-        } else if (timeLeft === 10) {
-            document.getElementById('progress-bar').classList.remove('load');
-            document.getElementById('progress-bar').classList.add('load')
         }
 
         // The amount of time passed increments by one
@@ -117,7 +120,6 @@ function countdown() {
 
         // The time left label is updated
         timer.innerHTML = timeLeft;
-
     }, 1000);
 }
 
