@@ -49,6 +49,16 @@ h3 {
 
 /* Welcome Screen */
 
+.play-button {
+    height: 5rem;
+    width: 10rem;
+    background-color: rgba(120, 122, 145, .5);
+    color: inherit;
+    border-radius: 50px;
+    grid-area: 2 / 2;
+    place-self: center;
+}
+
 #welcome-screen {
     grid-area: 2 / 2 / 4 / 2;
     text-align: center;
@@ -59,20 +69,25 @@ h3 {
     grid-template-columns: 1fr 8fr 1fr;
 }
 
-.play-button {
-    height: 5rem;
-    width: 10rem;
-    background-color: rgba(120, 122, 145, .5);
-    color: inherit;
-    border-radius: 50px;
-    display: block;
+#instructions {
     grid-area: 3 / 2;
+}
+
+#instructions > h3 {
+    width: auto;
+    height: auto;
+    padding: 30px;
+}
+
+#instructions > ul {
+    height: auto;
     place-self: center;
 }
 
 #welcome-screen > h2 {
-    grid-area: 2 / 2;
+    grid-area: 1 / 2;
     place-self: center;
+    height: auto;
 }
 
 /* Game Screen */
