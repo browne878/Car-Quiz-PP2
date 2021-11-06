@@ -199,6 +199,9 @@ function handleTimeout() {
 
     if (options[0].style.visibility === 'hidden') {
         for (const option of options) {
+            if (option.textContent === '') {
+                continue;
+            }
             option.style.visibility = 'visible';
         }
         document.getElementById('timer').textContent = 10;
