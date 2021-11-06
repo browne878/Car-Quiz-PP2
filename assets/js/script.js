@@ -103,7 +103,7 @@ function countdown() {
     let countdown = document.getElementById('progress-bar');
     let countdownClone = countdown.cloneNode(true);
     countdown.parentNode.replaceChild(countdownClone, countdown);
-    document.getElementById('progress-bar').classList.add('load')
+    document.getElementById('progress-bar').classList.add('load');
 
     // Credit to https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/ - timer function
     timerInterval = setInterval(() => {
