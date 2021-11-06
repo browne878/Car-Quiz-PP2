@@ -39,7 +39,7 @@ h3 {
 
 .game-area {
     grid-area: 2 / 2 / 2 / 2;
-    background-color: rgba(120, 122, 145, .3);
+    background-color: rgba(120, 122, 145, .5);
     border-radius: 50px;
 
     display: grid;
@@ -198,6 +198,8 @@ h3 {
 #play-again {
     padding: 0;
     height: 5rem;
+
+    grid-area: 3 / 2;
 }
 
 /* Media Queries */

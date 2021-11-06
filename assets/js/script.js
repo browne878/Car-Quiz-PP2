@@ -79,6 +79,7 @@ function loadQuestion(question) {
 function gameCompleted() {
 
     document.getElementById('question-screen').style.visibility = 'hidden';
+    document.getElementById('options').style.visibility = 'hidden';
     document.getElementById('complete-screen').style.visibility = 'visible';
 
     let header = document.getElementById('complete-screen').children[0];
