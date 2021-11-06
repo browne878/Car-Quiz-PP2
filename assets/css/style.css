@@ -84,6 +84,10 @@ h3 {
     place-self: center;
 }
 
+#instructions li {
+    padding: 15px;
+}
+
 #welcome-screen > h2 {
     grid-area: 1 / 2;
     place-self: center;
