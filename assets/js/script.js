@@ -1,6 +1,7 @@
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('play').addEventListener('click', beginGame);
+    document.getElementById('play-again').addEventListener('click', beginGame);
 
     let options = document.getElementsByClassName('option');
 
@@ -28,6 +29,7 @@ function beginGame() {
     getQuestions();
 
     document.getElementById('welcome-screen').style.visibility = 'hidden';
+    document.getElementById('complete-screen').style.visibility = 'hidden';
     document.getElementById('question-screen').style.visibility = 'visible';
 
     loadQuestion(selectedQuestions[0]);
@@ -79,8 +81,13 @@ function loadQuestion(question) {
 function gameCompleted() {
 
     document.getElementById('question-screen').style.visibility = 'hidden';
-    document.getElementById('options').style.visibility = 'hidden';
     document.getElementById('complete-screen').style.visibility = 'visible';
+
+    let options = document.getElementsByClassName('option');
+
+    for (const option of options) {
+        option.style.visibility = 'hidden';
+    }
 
     let header = document.getElementById('complete-screen').children[0];
     console.log(header.textContent);
