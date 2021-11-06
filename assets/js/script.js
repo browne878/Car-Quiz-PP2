@@ -82,17 +82,26 @@ function gameCompleted() {
     document.getElementById('complete-screen').style.visibility = 'visible';
 
     let header = document.getElementById('complete-screen').children[0];
+    console.log(header.textContent);
 
-    switch (score) {
-        case score <= 4:
+    switch (numCorrectAnswers) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
             header.textContent = 'Nice Try!';
             break;
 
-        case score <= 7 && score > 4:
+        case 5:
+        case 6:
+        case 7:
             header.textContent = 'Good Job!';
             break;
 
-        case score > 7:
+        case 8:
+        case 9:
+        case 10:
             header.textContent = 'Congratulations!';
             break;
     }
