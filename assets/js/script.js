@@ -77,7 +77,27 @@ function loadQuestion(question) {
 }
 
 function gameCompleted() {
-    alert('Game Completed ' + calculateScore());
+
+    document.getElementById('question-screen').style.visibility = 'hidden';
+    document.getElementById('complete-screen').style.visibility = 'visible';
+
+    let header = document.getElementById('complete-screen').children[0];
+
+    switch (score) {
+        case score <= 4:
+            header.textContent = 'Nice Try!';
+            break;
+
+        case score <= 7 && score > 4:
+            header.textContent = 'Good Job!';
+            break;
+
+        case score > 7:
+            header.textContent = 'Congratulations!';
+            break;
+    }
+
+    document.getElementById('score').textContent = `You Scored ${numCorrectAnswers} out of 10!`;
     clearInterval(timerInterval);
 }
 
