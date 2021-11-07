@@ -46,7 +46,7 @@ let quizQuestions = [ // 23 questions
     },
     {
         question: "What is the best-selling electric car in history?",
-        questionOptions: [ "Nissan Leaf", "Mercedes B-Class ED", "BMW i3", "Tesla Model 3"],
+        questionOptions: [ "Nissan Leaf", "Mercedes B-Class EV", "BMW i3", "Tesla Model 3"],
         correctAnswer: "Tesla Model 3",
     },
     {
