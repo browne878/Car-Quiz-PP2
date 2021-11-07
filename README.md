@@ -105,3 +105,5 @@ I deployed this website using GitHub Pages. The steps I took to do this are as f
 The link to my published website is: https://browne878.github.io/Car-Quiz-PP2/
 
 ## **Credits**
+[Background Image](assets/images/race-background.jpg) downloaded from [Pexels](https://www.pexels.com/photo/grey-coupe-on-road-3136673/).
+[Timer Function](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/) was taken and adapted for the timer and progress bar.
