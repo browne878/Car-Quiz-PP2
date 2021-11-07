@@ -293,6 +293,7 @@ h3 {
 
     #instructions li {
         padding: 5px;
+        font-size: 14px;
     }
 }
 
@@ -307,6 +308,37 @@ h3 {
     .game-area {
         height: 100%;
     }
+}
+
+@media screen and (min-width: 500px) {
+    
+    /* Welcome Screen */
+
+    #welcome-screen {
+        grid-template-rows: 2fr 2fr 9fr;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    
+    /* Welcome Screen */
+
+    #instructions li {
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    
+    h1,
+    h2,
+    h3 {
+        font-size: 2rem;
+    }
 
     /* Welcome Screen */
+
+    #instructions > h3 {
+        padding: 15px;
+    }
 }
