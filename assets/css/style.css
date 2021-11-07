@@ -301,6 +301,10 @@ h3 {
     #question {
         font-size: 20px;
     }
+    
+    #countdown {
+        padding-bottom: 5px;
+    }
 
     /* Complete Screen */
 
@@ -317,16 +321,22 @@ h3 {
     }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 400px) {
     
-    body {
-        height: 100vh;
+    /* Welcome Screen */
+
+    #instructions > h3 {
+        padding: 10px;
     }
 
-    /* Game Area */
+    #instructions li {
+        padding: 10px;
+    }
 
-    .game-area {
-        height: 100%;
+    /* Question Screen */
+
+    .option {
+        width: 80%;
     }
 }
 
@@ -337,6 +347,12 @@ h3 {
     #welcome-screen {
         grid-template-rows: 2fr 2fr 9fr;
     }
+
+    /* Question Screen */
+
+    .option {
+        padding: 2.5% 0;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -346,6 +362,20 @@ h3 {
     #instructions li {
         padding: 8px;
     }
+}
+
+@media screen and (min-width: 800px) {
+    
+    /* Question Screen */
+
+    .option {
+        padding: 1.5% 0;
+    }
+
+    #options > * {
+        font-size: 15px;
+    }
+    
 }
 
 @media screen and (min-width: 900px) {
