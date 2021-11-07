@@ -26,11 +26,19 @@ const countdownComplete = new CustomEvent('countdown');
  * Gets questions and begins the game
  */
 function beginGame() {
+    selectedQuestions = [];
+
     getQuestions();
 
     document.getElementById('welcome-screen').style.visibility = 'hidden';
     document.getElementById('complete-screen').style.visibility = 'hidden';
     document.getElementById('question-screen').style.visibility = 'visible';
+
+    let options = document.getElementsByClassName('option');
+
+    for (const option of options) {
+        option.style.visibility = 'visible';
+    }
 
     loadQuestion(selectedQuestions[0]);
 }
