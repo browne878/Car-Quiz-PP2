@@ -15,7 +15,6 @@ body {
     background: url('../images/pexels-sourav-mishra-3136673.jpg') no-repeat center;
     font-family: 'Montserrat', sans-serif;
     color: #EEEEEE;
-    filter: blur(0px);
 
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
@@ -44,7 +43,7 @@ h3 {
 
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
+    grid-template-rows: 10% 40% 40% 10%;
 }
 
 /* Welcome Screen */
@@ -233,15 +232,14 @@ h3 {
 @media screen and (min-width: 0px) {
 
     body {
-        grid-template-rows: 10% 80% 10%;
-        height: auto;
+        grid-template-rows: 10vh 80vh 10vh;
     }
 
     /* Game Area */
 
     .game-area {
-        grid-template-rows: 1fr 10fr 10fr 1fr;
-        height: fit-content;
+        grid-template-rows: 5% 45% 45% 5%;
+        height: 100%;
     }
     
     /* Welcome Screen */
@@ -258,7 +256,7 @@ h3 {
     }
 
     #welcome-screen {
-        grid-template-rows: 1fr 1fr 9fr;
+        grid-template-rows: 2fr 2fr 11fr;
         grid-template-columns: 5% 90% 5%;
     }
 
@@ -268,7 +266,54 @@ h3 {
 
     #instructions li {
         padding: 5px;
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    /* Question Screen */
+
+    .option {
+        padding: 5% 0;
+        margin: 5px;
+        width: 100%;
+    }
+
+    #question-screen {
+        grid-template-rows: 4fr 1fr 5fr;
+    }
+
+    #options {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    #options > * {
+        font-size: 12px;
+    }
+
+    #progress {
+        width: 200px;
+    }
+
+    #timer {
+        padding: 10px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    /* Complete Screen */
+
+    #complete-screen > h2 {
+        place-self: center;
+    }
+
+    #score {
+        place-self: center;
+    }
+
+    #play-again {
+        height: 3rem;
     }
 }
 
