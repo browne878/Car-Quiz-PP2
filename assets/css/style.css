@@ -255,7 +255,7 @@ h3 {
 
 } */
 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0px) and (max-width: 1080px) {
 
     body {
         grid-template-rows: 10% 80% 10%;
@@ -294,4 +294,19 @@ h3 {
     #instructions li {
         padding: 5px;
     }
+}
+
+@media screen and (min-width: 375px) {
+    
+    body {
+        height: 100vh;
+    }
+
+    /* Game Area */
+
+    .game-area {
+        height: 100%;
+    }
+
+    /* Welcome Screen */
 }
