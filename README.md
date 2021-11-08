@@ -77,6 +77,11 @@ Once I had completed the website, I entered my HTML code into the [W3C Markup Va
 
 ### **JSHint Validator**
 
+Once I completed the quiz, I entered all of my JS code into the [JSHint Javascript Validator](https://jshint.com/). There is only two warnings, one is an underfined variable in the script.js file, the other is a unused variable in the questions.js file. This is due to the questions.js file being seperated to keep the files easy to read. Each file is loaded and the unused variable is defined globally, allowing it to be used by the script.js file.
+
+The screenshot of the report for the script.js file can be found [here](assets/images/jshint-script.png).
+The screenshot of the report for the questions.js file can be found [here](assets/images/jshint-questions.png).
+
 ## **Bugs**
 
 ### Unfixed Bugs
