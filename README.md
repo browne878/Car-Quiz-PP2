@@ -39,11 +39,17 @@ My aim for this quiz was to make a simple and easy to use UI that allows the use
     - I wanted this page to be clean and easy to read. I inteded to make it easy to navigate to allow the user to behin playing.
 ![Welcome Screen](assets/images/welcome-screen.png)
 
-
-
 - ### **Question Screen**
+    - I wanted the question and options to be easily readable. I also wanted it to be clear on how to play.
+    - I incuded a timer and progress bar to ensure the player has enough time to read the question and answer it.
+![Question Screen without Options](assets/images/question-screen.png)
+![Question Screen with Options](assets/images/question-screen-answer.png)
 
 - ### **Game Over Screen**
+    - I wanted this page to display the score the player achieved throughout the game.
+    - I didn't want too much information on this page as the user now understands how the game works.
+    - I also wanted the user to have the option to play the game again without reloading the page.
+![Game Over Screen](assets/images/game-over-screen.png)
 
 ## **Future Development**
 
