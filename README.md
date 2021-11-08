@@ -55,11 +55,27 @@ My aim for this quiz was to make a simple and easy to use UI that allows the use
 
 ## **Testing**
 
-### Lighthouse
+### **Lighthouse**
 
-### HTML Validator
+During the development of the quiz, I used the lighthouse to monitor my progress. I used it to ensure that everything added performed as intended. I also used it to ensure that I was following best practices and accessibility guidelines.
 
-### CSS Validator
+By doing this throught the development process I was able to ensure that there were no issues with my lighthouse score.
+
+Mobile Score: Full report can be found [here](assets/lighthouse/mobile.pdf)
+
+![Mobile Lighthouse Score](assets/images/lighthouse-mobile.png)
+
+Desktop Score: Full report can be found [here](assets/lighthouse/desktop.pdf)
+
+![Desktop Lighthouse Score](assets/images/lighthouse-desktop.png)
+
+### **HTML Validator**
+
+Once I had completed the website, I entered my HTML code into the [W3C Markup Validation Service](https://validator.w3.org/). The results can be found by clicking [here](assets/images/html-validator.png)
+
+### **CSS Validator**
+
+### **JSHint Validator**
 
 ## **Bugs**
 
