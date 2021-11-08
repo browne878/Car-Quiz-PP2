@@ -1,6 +1,6 @@
 # **Car Quiz**
 
-insert image here
+![Race Banner Image](assets/images/race-banner.jpg)
 
 You can see the live website [here](https://browne878.github.io/Car-Quiz-PP2/).
 
