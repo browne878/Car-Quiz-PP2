@@ -79,6 +79,8 @@ Once I had completed the website, I entered my HTML code in the [W3C Markup Vali
 
 ### **CSS Validator**
 
+After completing the website, I entered my CSS code in the [W3C CSS Validation Service](https://validator.w3.org/). The results can be found by clicking [here](assets/images/css-validator.png)
+
 ### **JSHint Validator**
 
 Once I completed the quiz, I entered all of my JS code into the [JSHint Javascript Validator](https://jshint.com/). There are only two warnings, one is an undefined variable in the script.js file, the other is an unused variable in the questions.js file. This is due to the questions.js file being separated to keep the files easier to read. Each file is loaded and the unused variable is defined globally, allowing it to be used by the script.js file.
