@@ -35,7 +35,7 @@ function beginGame() {
     document.getElementById('welcome-screen').style.visibility = 'hidden';
     document.getElementById('complete-screen').style.visibility = 'hidden';
     document.getElementById('question-screen').style.visibility = 'visible';
-    
+
     loadQuestion(selectedQuestions[0]);
 }
 
@@ -119,14 +119,6 @@ function gameCompleted() {
 
     document.getElementById('score').textContent = `You Scored ${numCorrectAnswers} out of 10!`;
     clearInterval(timerInterval);
-}
-
-/**
- * Calcualtes the percentage of answers answered correctly
- * @returns Percentage of correct answers
- */
-function calculateScore() {
-    return Math.floor((numCorrectAnswers / selectedQuestions.length) * 100);
 }
 
 /**
