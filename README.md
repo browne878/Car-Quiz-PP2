@@ -88,6 +88,10 @@ The screenshot of the report for the questions.js file can be found [here](asset
 
 ### Fixed Bugs
 
+While making the progress bar, I ran into a bug where the progress bar would work once and not reset. This was because I was unable to make the animation restart. In order to fix this, in the js, I cloned the progress bar and replace it each time the progress bar is meant to reset. This means that each time the progress bar restarts, it is a new instance of itself and begins the progress over again.
+
+Another bug I encountered during development was that when you play again, you would then face the 10 questions that were just played, as well as another 10 added on to the end. In order to fix this, every time the beginGame functions is called, the array will be cleared. This resolves this issue.
+
 ## **Deployment**
 
 ### Cloning / Forking Repository
@@ -138,4 +142,5 @@ The link to my published website is: https://browne878.github.io/Car-Quiz-PP2/
 
 ## **Credits**
 [Background Image](assets/images/race-background.jpg) downloaded from [Pexels](https://www.pexels.com/photo/grey-coupe-on-road-3136673/).
+
 [Timer Function](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/) was taken and adapted for the timer and progress bar.
