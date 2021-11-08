@@ -9,28 +9,29 @@ The purpose of this website to provide the user with a fun and challenging game 
 My aim for this quiz was to make a simple and easy to use UI that allows the user to focus on the game. I wanted to be able to randomise the questions so the user can play multiple times. Finally, I wanted this website to be responsive, so that users on all devices can enjoy the completed website.
 
 ## **Table of Contents**
-- ### [Features]()
-    - [Welcome Screen]()
-    - [Question Screen]()
-    - [Game Over Screen]()
+- ### [Features](https://github.com/browne878/Car-Quiz-PP2#features-1)
+    - [Welcome Screen](https://github.com/browne878/Car-Quiz-PP2#welcome-screen)
+    - [Question Screen](https://github.com/browne878/Car-Quiz-PP2#question-screen)
+    - [Game Over Screen](https://github.com/browne878/Car-Quiz-PP2#game-over-screen)
 
-- ### [Future Development]()
+- ### [Future Development](https://github.com/browne878/Car-Quiz-PP2#future-development-1)
 
-- ### [Testing]()
-    - [Lighthouse]()
-    - [HTML Validator]()
-    - [CSS Validator]()
+- ### [Testing](https://github.com/browne878/Car-Quiz-PP2#testing-1)
+    - [Lighthouse](https://github.com/browne878/Car-Quiz-PP2#lighthouse)
+    - [HTML Validator](https://github.com/browne878/Car-Quiz-PP2#html-validator)
+    - [CSS Validator](https://github.com/browne878/Car-Quiz-PP2#css-validator)
+    - [JSHint Validator](https://github.com/browne878/Car-Quiz-PP2#jshint-validator)
 
-- ### [Bugs]()
-    - [Unfixed Bugs]()
-    - [Fixed Bugs]()
+- ### [Bugs](https://github.com/browne878/Car-Quiz-PP2#bugs-1)
+    - [Unfixed Bugs](https://github.com/browne878/Car-Quiz-PP2#unfixed-bugs)
+    - [Fixed Bugs](https://github.com/browne878/Car-Quiz-PP2#fixed-bugs)
 
-- ### [Deployment]()
-    - [Cloning/Forking Repository]()
-    - [Local Deployment]()
-    - [Remote Deployment]()
+- ### [Deployment](https://github.com/browne878/Car-Quiz-PP2#deployment-1)
+    - [Cloning/Forking Repository](https://github.com/browne878/Car-Quiz-PP2#cloning--forking-repository)
+    - [Local Deployment](https://github.com/browne878/Car-Quiz-PP2#local-deployment)
+    - [Remote Deployment](https://github.com/browne878/Car-Quiz-PP2#remote-deployment)
 
-- ### [Credits]()
+- ### [Credits](https://github.com/browne878/Car-Quiz-PP2#credits-1)
 
 ## **Features**
 
