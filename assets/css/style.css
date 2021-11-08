@@ -229,7 +229,7 @@ h3 {
 
 }
 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0px) and (max-width: 1080px) {
 
     body {
         grid-template-rows: 10vh 80vh 10vh;
@@ -391,6 +391,24 @@ h3 {
     #instructions > h3 {
         padding: 15px;
     }
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* Question Screen */
+
+    .option {
+        padding: 4% 0;
+    }
+
+    #question {
+        font-size: 3rem;
+    }
+
+    #options > * {
+        font-size: 20px;
+    }
+    
 }
 
 @media screen and (min-width: 1200px) {

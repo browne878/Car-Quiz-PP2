@@ -27,19 +27,15 @@ const countdownComplete = new CustomEvent('countdown');
  */
 function beginGame() {
     selectedQuestions = [];
+    numCorrectAnswers = 0;
+    numIncorrectAnswers = 0;
 
     getQuestions();
 
     document.getElementById('welcome-screen').style.visibility = 'hidden';
     document.getElementById('complete-screen').style.visibility = 'hidden';
     document.getElementById('question-screen').style.visibility = 'visible';
-
-    let options = document.getElementsByClassName('option');
-
-    for (const option of options) {
-        option.style.visibility = 'visible';
-    }
-
+    
     loadQuestion(selectedQuestions[0]);
 }
 
@@ -98,7 +94,6 @@ function gameCompleted() {
     }
 
     let header = document.getElementById('complete-screen').children[0];
-    console.log(header.textContent);
 
     switch (numCorrectAnswers) {
         case 0:

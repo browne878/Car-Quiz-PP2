@@ -35,6 +35,11 @@ My aim for this quiz was to make a simple and easy to use UI that allows the use
 ## **Features**
 
 - ### **Welcome Screen**
+    - The purpose of this page is to give the player an understanding of how to play the game and give them an idea of what to expect.
+    - I wanted this page to be clean and easy to read. I inteded to make it easy to navigate to allow the user to behin playing.
+![Welcome Screen](assets/images/welcome-screen.png)
+
+
 
 - ### **Question Screen**
 
