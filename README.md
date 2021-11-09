@@ -101,7 +101,7 @@ While making the progress bar, I ran into a bug where the progress bar would wor
 
 Another bug I encountered during development was that when you play again, you would then face the 10 questions that were just played, as well as another 10 added on to the end. In order to fix this, every time the beginGame function is called, the array will be cleared. This resolves this issue.
 
-This bug occurs every time the game is played again after completing one round. After a random number of questions, once the timer is up, the options to answer the question will not be made visible. This can be bypassed by refreshing the page, however, this is not a permanent fix.
+The worst bug I encountered occurs every time the game is played again after completing one round. After a random number of questions, once the timer is up, the options to answer the question will not be made visible. This can be bypassed by refreshing the page, however, this is not a permanent fix. The cause of this was the shift method used in the loadQuestion function. I am not too sure how working with the one object effected another, however, I think it may have been to do with how Javascript stores objects in memory.
 
 ## **Deployment**
 
