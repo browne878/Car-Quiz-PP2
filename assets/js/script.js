@@ -26,6 +26,8 @@ const countdownComplete = new CustomEvent('countdown');
  * Gets questions and begins the game
  */
 function beginGame() {
+
+    //Reset global variables for new game
     selectedQuestions = [];
     numCorrectAnswers = 0;
     numIncorrectAnswers = 0;
@@ -75,8 +77,10 @@ function loadQuestion(question) {
 
     for (const option of options) {
         option.style.visibility = 'hidden';
-        option.textContent = question.questionOptions[0];
-        question.questionOptions.shift();
+    }
+
+    for (let i = 0; i < question.questionOptions.length; i++) {
+        options[i].textContent = question.questionOptions[i];
     }
 
     countdown();
