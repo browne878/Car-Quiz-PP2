@@ -93,15 +93,15 @@ The screenshot of the report for the questions.js file can be found [here](asset
 
 ### Unfixed Bugs
 
-There is currently one existing bug I am working on resolving. This bug occurs every time the game is played again after completing one round. After a random number of questions, once the timer is up, the options to answer the question will not be made visible. This can be bypassed by refreshing the page, however, this is not a permanent fix.
-
-If you are able to see what the issue causing this bug could be, please feel to reach out to me as it would be greatly appreciated.
+There are currently no known bugs.
 
 ### Fixed Bugs
 
 While making the progress bar, I ran into a bug where the progress bar would work once and not reset. This was because I was unable to make the animation restart. In order to fix this, in the js, I cloned the progress bar and replace it each time the progress bar is meant to reset. This means that each time the progress bar restarts, it is a new instance of itself and begins the progress over again.
 
 Another bug I encountered during development was that when you play again, you would then face the 10 questions that were just played, as well as another 10 added on to the end. In order to fix this, every time the beginGame function is called, the array will be cleared. This resolves this issue.
+
+This bug occurs every time the game is played again after completing one round. After a random number of questions, once the timer is up, the options to answer the question will not be made visible. This can be bypassed by refreshing the page, however, this is not a permanent fix.
 
 ## **Deployment**
 
